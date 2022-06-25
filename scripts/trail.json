@@ -1,0 +1,23 @@
+{
+    "pipeline": [
+        {
+            "type": "readers.ept",
+            "filename": "http://s3-us-west-2.amazonaws.com/usgs-lidar-public/IL_BooneCo_2007/ept.json",
+            "resolution": 5
+        },
+        {
+            "type": "writers.las",
+            "compression": "true",
+            "minor_version": "2",
+            "dataformat_id": "0",
+            "filename": "IL_BooneCo_2007.laz"
+        },
+        {
+            "type": "writers.gdal",
+            "gdaldriver": "GTiff",
+            "output_type": "all",
+            "resolution": "5.0",
+            "filename": "IL_BooneCo_2007.tif"
+        }
+    ]
+}
