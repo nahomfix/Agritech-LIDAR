@@ -21,7 +21,7 @@ class Logger:
         logger.setLevel(level)
 
         # define file handler and set formatter
-        root_dir = Path().cwd()
+        root_dir = Path().cwd().parent
         logs_dir = root_dir / "logs"
 
         if not logs_dir.exists():
