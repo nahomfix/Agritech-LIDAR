@@ -85,13 +85,3 @@ class LoadData:
 
         except Exception as error:
             self.logger.error(error)
-
-
-if __name__ == "__main__":
-    load_data = LoadData(
-        [-9619500, 5187800],
-        [-9618900, 5188500],
-        "IL_BooneCo_2007",
-    )
-
-    load_data.fetch_data()
