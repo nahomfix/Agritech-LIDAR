@@ -6,9 +6,6 @@ Agritech-LIDAR is an open-source python package for retrieving, transforming, an
 
 -   How to install this package in your project
 
-## Project layout
+## [Usage](usage)
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+-   How to use this package and the functions in it

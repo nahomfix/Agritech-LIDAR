@@ -3,4 +3,5 @@ site_url: https://nahomfix.github.io/Agritech-LIDAR/
 nav:
     - Home: index.md
     - Installation: installation.md
+    - Usage: usage.md
 theme: readthedocs
