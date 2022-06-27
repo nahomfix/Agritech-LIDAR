@@ -25,3 +25,39 @@ def plot_2D(self) -> None:
 ```
 
 Plots side by side of DEM and histogram.
+
+## plot_heatmap
+
+```
+def plot_heatmap(self, year: str, data_dict: dict) -> None:
+```
+
+Plots a heatmap view of a terrain
+
+## Parameters
+
+year: str
+
+-   the year of the desired geopandas data
+
+data_dict: dict
+
+-   the dictionary mapping of the year to its geopandas data
+
+## plot_3D
+
+```
+def plot_3D(self, year: str, data_dict: dict) -> None:
+```
+
+Plots a 3D view of a terrain
+
+## Parameters
+
+year: str
+
+-   the year of the desired geopandas data
+
+data_dict: dict
+
+-   the dictionary mapping of the year to its geopandas data
