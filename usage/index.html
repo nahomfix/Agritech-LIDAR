@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://nahomfix.github.io/Agritech-LIDAR/installation/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://nahomfix.github.io/Agritech-LIDAR/usage/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Installation - Agritech-LIDAR</title>
+    <title>Usage - Agritech-LIDAR</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Installation";
-        var mkdocs_page_input_path = "installation.md";
-        var mkdocs_page_url = "/Agritech-LIDAR/installation/";
+        var mkdocs_page_name = "Usage";
+        var mkdocs_page_input_path = "usage.md";
+        var mkdocs_page_url = "/Agritech-LIDAR/usage/";
       </script>
     
     <script src="../js/jquery-3.6.0.min.js" defer></script>
@@ -44,14 +44,28 @@
                 <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
                 </li>
               </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="./">Installation</a>
-    <ul class="current">
-    </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
                 </li>
               </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../usage/">Usage</a>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Usage</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#fetch_data">fetch_data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#plot_dem_contours">plot_dem_contours</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#plot_2d">plot_2D</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#plot_heatmap">plot_heatmap</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#parameters">Parameters</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#plot_3d">plot_3D</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#parameters_1">Parameters</a>
+    </li>
+    </ul>
                 </li>
               </ul>
       </div>
@@ -67,7 +81,7 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li><li>Installation</li>
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li><li>Usage</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -77,34 +91,51 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="installation">Installation</h1>
-<p>You can install the package in two ways either:</p>
+                <h1 id="usage">Usage</h1>
+<p>Below are the functions defined in this package</p>
+<h2 id="fetch_data">fetch_data</h2>
+<pre><code>def fetch_data(self) -&gt; dict:
+</code></pre>
+<p>Fetches las and geotif data from public aws entwine dataset.</p>
+<h2 id="plot_dem_contours">plot_dem_contours</h2>
+<pre><code>def plot_dem_contours(self) -&gt; None:
+</code></pre>
+<p>Plots DEM with its contours</p>
+<h2 id="plot_2d">plot_2D</h2>
+<pre><code>def plot_2D(self) -&gt; None:
+</code></pre>
+<p>Plots side by side of DEM and histogram.</p>
+<h2 id="plot_heatmap">plot_heatmap</h2>
+<pre><code>def plot_heatmap(self, year: str, data_dict: dict) -&gt; None:
+</code></pre>
+<p>Plots a heatmap view of a terrain</p>
+<h2 id="parameters">Parameters</h2>
+<p>year: str</p>
 <ul>
-<li>Clone the repo</li>
+<li>the year of the desired geopandas data</li>
 </ul>
-<pre><code>git clone https://github.com/nahomfix/Agritech-LIDAR.git
-</code></pre>
+<p>data_dict: dict</p>
 <ul>
-<li>Navigate to the folder</li>
+<li>the dictionary mapping of the year to its geopandas data</li>
 </ul>
-<pre><code>cd Agritech-LIDAR
+<h2 id="plot_3d">plot_3D</h2>
+<pre><code>def plot_3D(self, year: str, data_dict: dict) -&gt; None:
 </code></pre>
+<p>Plots a 3D view of a terrain</p>
+<h2 id="parameters_1">Parameters</h2>
+<p>year: str</p>
 <ul>
-<li>Install the dependencies</li>
+<li>the year of the desired geopandas data</li>
 </ul>
-<pre><code>pip install -r requirements.txt
-</code></pre>
-<p>Or run</p>
-<pre><code>
-pip install Agritech-LIDAR
-
-</code></pre>
+<p>data_dict: dict</p>
+<ul>
+<li>the dictionary mapping of the year to its geopandas data</li>
+</ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../usage/" class="btn btn-neutral float-right" title="Usage">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../installation/" class="btn btn-neutral float-left" title="Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -127,10 +158,8 @@ pip install Agritech-LIDAR
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../installation/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../usage/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
